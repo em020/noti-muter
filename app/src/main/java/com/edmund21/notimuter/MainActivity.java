@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = RingtoneManager.getActualDefaultRingtoneUri(this, RingtoneManager.TYPE_NOTIFICATION);
         Log.d("foo", "foo");
         if (uri == null) {
-            RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_NOTIFICATION, Uri.parse("content://media/internal/audio/media/32"));
+            RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_NOTIFICATION, Uri.parse(/*"content://media/internal/audio/media/32"*/"file:///system/media/audio/notifications/Fresh.ogg"));
         } else {
             RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_NOTIFICATION, null);
         }
